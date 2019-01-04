@@ -26,6 +26,6 @@ deploy:
     github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
     repo: hyuwah.github.io/v2
     keep-history: true
-    target-branch: gh-pages
+    target-branch: master
     on:
-        branch: gh-pages
+        branch: master
