@@ -1,6 +1,6 @@
 module.exports = {
     base: '/v2/',
-    title: 'MUHAMMAD WAHYUDIN',
+    title: 'Muhammad Wahyudin\'s Page',
     description: 'Software Developer - Instrumentation & Electronics Physicist - Technology Enthusiast',
     head: [
         ['link', { rel: 'stylesheet', href: `https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.min.css` }],
