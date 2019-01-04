@@ -1,5 +1,4 @@
 import Vuetify from "vuetify";
-import 'vuetify/dist/vuetify.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import VueContentPlaceholder from "vue-content-placeholders";
 
