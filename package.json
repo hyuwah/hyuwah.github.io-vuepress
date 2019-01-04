@@ -14,7 +14,6 @@
     "docs:build": "vuepress build docs"
   },
   "dependencies": {
-    "@mauromadeit/vuepress-theme-vuetify": "^0.2.0",
     "material-design-icons-iconfont": "^4.0.3",
     "vue-content-placeholders": "^0.2.1"
   }

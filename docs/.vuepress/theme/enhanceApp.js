@@ -1,5 +1,5 @@
 import Vuetify from "vuetify";
-import 'vuetify/dist/vuetify.min.css'
+import 'vuetify/dist/vuetify.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import VueContentPlaceholder from "vue-content-placeholders";
 
@@ -10,8 +10,6 @@ export default ({
     siteData // site metadata
   }) => {
     // ...apply enhancements to the app
-    Vue.use(Vuetify, {
-      iconfont: 'mdi'
-    })
+    Vue.use(Vuetify)
     Vue.use(VueContentPlaceholder)
   }
