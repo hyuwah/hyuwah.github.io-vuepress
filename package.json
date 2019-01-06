@@ -15,7 +15,6 @@
   },
   "dependencies": {
     "material-design-icons-iconfont": "^4.0.3",
-    "vue-content-placeholders": "^0.2.1",
-    "vue-scroll-reveal": "^1.0.11"
+    "vue-content-placeholders": "^0.2.1"
   }
 }

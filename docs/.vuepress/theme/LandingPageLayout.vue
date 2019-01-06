@@ -94,7 +94,7 @@ export default {
       this.window.height = window.innerHeight;
     }
   },
-  created() {
+  mounted() {
     window.addEventListener("resize", this.handleResize);
     this.handleResize();
   },
