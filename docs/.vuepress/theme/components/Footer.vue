@@ -3,12 +3,12 @@
     <v-layout column class="mt-2">
       <v-layout row wrap class="pa-2">
         <v-flex xs10 md3 offset-xs1 offset-md2>
-          <h1 class="font-weight-regular">Links</h1>
+          <!-- <h1 class="font-weight-regular">Links</h1>
           <ul>
             <li>Github Profile</li>
             <li>Gitlab</li>
             <li>Codepen</li>
-          </ul>
+          </ul> -->
         </v-flex>
 
         <v-flex xs10 md3 offset-xs1 offset-md2>

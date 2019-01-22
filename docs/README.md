@@ -3,6 +3,7 @@ home: true
 heroImage: https://res.cloudinary.com/hyuwah-github-io/image/upload/v1514133423/cattypefrenzy.gif
 actionText: Get Started →
 actionLink: /portfolio/
+portfolio: /portfolio/
 features:
 - title: Simplicity First
   details: Minimal setup with markdown-centered project structure helps you focus on writing.

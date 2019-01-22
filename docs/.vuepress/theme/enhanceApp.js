@@ -1,7 +1,7 @@
 import Vuetify from "vuetify";
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import VueContentPlaceholder from "vue-content-placeholders";
-// import VueScrollReveal from 'vue-scroll-reveal';
+import VueScrollReveal from 'vue-scroll-reveal';
 
 // Helpers
 import colors from 'vuetify/es5/util/colors'
@@ -21,5 +21,5 @@ export default ({
       }
     })
     Vue.use(VueContentPlaceholder)
-    // Vue.use(VueScrollReveal)
+    Vue.use(VueScrollReveal)
   }

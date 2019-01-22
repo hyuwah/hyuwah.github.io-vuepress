@@ -1,7 +1,7 @@
 <template>
     <v-toolbar app :inverted-scroll="$frontmatter.home">
           <v-spacer></v-spacer>
-      <v-toolbar-title >
+      <v-toolbar-title @click="toHome" style="cursor:pointer">
         <v-layout align-center  class="primary--text">
         <img height="36px" src="http://muhammadwahyudin.com/assets/images/logo.png"/>
         <span class="font-weight-bold">.github</span>
@@ -14,7 +14,11 @@
 
 <script>
 export default {
-
+    methods:{
+        toHome(){
+            this.$router.push('/')
+        }
+    }
 }
 </script>
 
