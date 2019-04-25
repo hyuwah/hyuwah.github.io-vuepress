@@ -10,7 +10,7 @@
     </v-layout>
     <!-- Carousel -->
     <v-carousel v-scroll-reveal.reset="{delay:350}" :height="getCarouselHeight()">
-      <v-carousel-item v-for="(item,i) in items" :key="i">
+      <v-carousel-item v-for="(item,i) in items.slice().reverse()" :key="i">
         <v-container fluid class="bg--scrim">
           <v-layout row wrap class="pa-3">
             <v-flex xs12 sm6>
@@ -56,19 +56,27 @@ export default {
       items: [
         {
           key: "1",
-          //src:
-          //  "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1520599860/catatanku-banner_uzx2tt.png",
-          src: "https://lh3.googleusercontent.com/0FsJRDl4zaxo4LrIfgXtAe9C0dETEPTOn4VkJEikGRoutPOaXsvlsDO0ZQuonIK-uocT=w1920-h929-rw",
-          title: "CatatanKu",
-          subtitle: "Android app for notes & todos",
-          desc: `Simple note taking android app developed with Java. Basic CRUD using Cursor Loader pattern into SQLite database. CatatanKu is a lightweight notepad application to keep track of your thoughts and ideas.`,
-          github: "#",
-          playstore:
-            "https://play.google.com/store/apps/details?id=io.github.hyuwah.catatanku&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-          type: "android"
+          src:
+            "https://github.com/hyuwah/TAZPASoftware/blob/master/assets/TB3-2.gif?raw=true",
+          title: "TAZPA Software",
+          subtitle: "DAQ Software for my thesis",
+          desc: `TAZPA Software is a software interface for TAZPA, a system to measure zeta potential of a colloidal sample. Part of my thesis on Universitas Padjadjaran.`,
+          github: "https://github.com/hyuwah/TAZPASoftware",
+          playstore: "",
+          type: ".net desktop"
         },
         {
           key:"2",
+          src:"https://camo.githubusercontent.com/1a1e12f6a6d8edc966b933c80965e4789a224a54/687474703a2f2f7265732e636c6f7564696e6172792e636f6d2f6879757761682d6769746875622d696f2f696d6167652f75706c6f61642f76313531383834343339322f6d6f7669656b752d302e352d686f6d652e706e67",
+          title: "MovieKu",
+          subtitle:"Movie information android app",
+          desc: "An Indonesia Android Kejar Intermediate class final project. Data provided by The Movie Database (TMDb) API. Search movies, see trailer & review. ",
+          github: "https://github.com/hyuwah/movieku",
+          playstore:"",
+          type:"android",
+        },
+        {
+          key:"3",
           src:"https://camo.githubusercontent.com/c7977b50e3405a0e4e0b72063f062005b55ffe06/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6879757761682d6769746875622d696f2f696d6167652f75706c6f61642f635f7363616c652c685f3634302f76313532323835373039342f6d63615f617961745f666574636865722e706e67",
           title: "Muslim Companion App",
           subtitle:"Simple Random Ayat Fetcher from Quran",
@@ -79,26 +87,29 @@ export default {
 
         },
         {
-          key:"3",
-          src:"https://camo.githubusercontent.com/1a1e12f6a6d8edc966b933c80965e4789a224a54/687474703a2f2f7265732e636c6f7564696e6172792e636f6d2f6879757761682d6769746875622d696f2f696d6167652f75706c6f61642f76313531383834343339322f6d6f7669656b752d302e352d686f6d652e706e67",
-          title: "MovieKu",
-          subtitle:"Movie information android app",
-          desc: "An Indonesia Android Kejar Intermediate class final project. Data provided by The Movie Database (TMDb) API. Search movies, see trailer & review. ",
-          github: "https://github.com/hyuwah/movieku",
-          playstore:"",
-          type:"android",
+          key: "4",
+          //src:
+          //  "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1520599860/catatanku-banner_uzx2tt.png",
+          src: "https://lh3.googleusercontent.com/0FsJRDl4zaxo4LrIfgXtAe9C0dETEPTOn4VkJEikGRoutPOaXsvlsDO0ZQuonIK-uocT=w1920-h929-rw",
+          title: "CatatanKu",
+          subtitle: "Android app for notes & todos",
+          desc: `Simple note taking android app developed with Java. Basic CRUD using Cursor Loader pattern into SQLite database. CatatanKu is a lightweight notepad application to keep track of your thoughts and ideas.`,
+          github: "https://github.com/hyuwah/android-catatanku",
+          playstore:
+            "https://play.google.com/store/apps/details?id=io.github.hyuwah.catatanku&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
+          type: "android"
         },
         {
-          key: "4",
-          src:
-            "https://github.com/hyuwah/TAZPASoftware/blob/master/assets/TB3-2.gif?raw=true",
-          title: "TAZPA Software",
-          subtitle: "DAQ Software for my thesis",
-          desc: `TAZPA Software is a software interface for TAZPA, a system to measure zeta potential of a colloidal sample. Part of my thesis on Universitas Padjadjaran.`,
-          github: "https://github.com/hyuwah/TAZPASoftware",
-          playstore: "",
-          type: ".net desktop"
-        }
+          key: "5",
+          src: "https://lh3.googleusercontent.com/DpEDoCjLkrQVbuBAXQSJ4FwBf3nc-XuASHBlAGSqUGhLlW3PksCaMx3YjyFa4N3_j4k=w1920-h928-rw",
+          title: "IdentitasKu",
+          subtitle: "App to help you save your important data that you don't have time to remember",
+          desc: `Save your ID card, handphone number, address data in a centralized way. Send those data to other applications such as chat app. Or copy the data wherever the data is needed. Data protected with password / fingerprint & encryption`,
+          github: "https://github.com/hyuwah/IdentitasKu",
+          playstore:
+            "https://play.google.com/store/apps/details?id=com.muhammadwahyudin.identitasku",
+          type: "android"
+        },
       ]
     };
   },

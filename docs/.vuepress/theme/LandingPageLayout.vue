@@ -77,6 +77,24 @@
           <!-- PORTFOLIO WIDGET -->
           <PortfolioWidget/>
 
+          <!-- CODING STATS WIDGET -->
+          <v-flex xs12 sm10 md8 offset-sm1 offset-md2 class="pb-5 mt-5 mb-5">
+            <v-layout v-scroll-reveal.reset="{delay:250}" row class="mb-4" align-end>
+              <h2 class="display-2 white--text">Coding Stats</h2>
+            </v-layout>
+            <v-layout row wrap>
+              <!-- Coding activity Wakatime -->
+              <v-flex xs6>
+                <figure><embed src="https://wakatime.com/share/@hyuwah/51e6a935-50a8-485b-aa6d-b2ab42c31640.svg"></embed></figure>              
+              </v-flex>
+              <!-- Language Wakatime -->              
+              <v-flex xs6>
+                <figure><embed src="https://wakatime.com/share/@hyuwah/9d20a958-13e7-4279-ba69-ed672b06690f.svg"></embed></figure>
+              </v-flex>
+            </v-layout>
+          </v-flex>
+
+
           <!-- <Content/> -->
         </v-layout>
       </v-container>
