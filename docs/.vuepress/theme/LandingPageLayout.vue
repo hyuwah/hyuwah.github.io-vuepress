@@ -31,7 +31,7 @@
                 <v-card-title primary-title>
                   <v-layout column align-center>
                     <v-avatar size="96px">
-                      <v-img src="http://muhammadwahyudin.com/assets/images/pp-square.webp"/>
+                      <v-img src="http://hyuwah.github.io/assets/images/pp-square.webp"/>
                     </v-avatar>
                   </v-layout>
                 </v-card-title>
@@ -84,15 +84,18 @@
             </v-layout>
             <v-layout row wrap>
               <!-- Coding activity Wakatime -->
-              <v-flex xs6>
-                <figure><embed src="https://wakatime.com/share/@hyuwah/51e6a935-50a8-485b-aa6d-b2ab42c31640.svg"></embed></figure>              
+              <v-flex xs12 md6>
+                <figure style="padding: 1em;"><embed src="https://wakatime.com/share/@hyuwah/52042bd7-8354-4496-8b7a-ca9e705df2d2.svg"></embed></figure>
               </v-flex>
               <!-- Language Wakatime -->              
-              <v-flex xs6>
-                <figure><embed src="https://wakatime.com/share/@hyuwah/9d20a958-13e7-4279-ba69-ed672b06690f.svg"></embed></figure>
+              <v-flex xs12 md6>
+                <figure style="padding: 1em;"><embed src="https://wakatime.com/share/@hyuwah/ed51c99a-a0c7-4258-b42c-05d84ffed8d6.svg"></embed></figure>
               </v-flex>
             </v-layout>
           </v-flex>
+
+          <!-- CODING STATS APEXCHARTS -->
+          <!-- <CodingStats /> -->
 
 
           <!-- <Content/> -->
@@ -101,7 +104,7 @@
     </div>
 
     <!-- BOTTOM PARALLAX -->
-    <v-parallax height="300" src="http://muhammadwahyudin.com/assets/images/arduino.webp"></v-parallax>
+    <v-parallax height="300" src="http://hyuwah.github.io/assets/images/arduino.webp"></v-parallax>
     <!-- CONTACT SECTION -->
     <div class="elevation-4 pt-4 pb-4">
       <Contact/>
@@ -113,11 +116,13 @@
 import DefaultLayout from "./Layout";
 import Contact from "./LandingPage/Contact";
 import PortfolioWidget from "./LandingPage/PortfolioWidget";
+import CodingStats from "./LandingPage/CodingStats"
 export default {
   components: {
     DefaultLayout,
     Contact,
-    PortfolioWidget
+    PortfolioWidget,
+    CodingStats
   },
   data() {
     return {

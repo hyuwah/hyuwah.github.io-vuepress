@@ -3,7 +3,7 @@
           <v-spacer></v-spacer>
       <v-toolbar-title @click="toHome" style="cursor:pointer">
         <v-layout align-center  class="primary--text">
-        <img height="36px" src="http://muhammadwahyudin.com/assets/images/logo.png"/>
+        <img height="36px" src="http://hyuwah.github.io/assets/images/logo.png"/>
         <span class="font-weight-bold">.github</span>
         <span class="font-weight-light">.io</span>
         </v-layout>

@@ -13,7 +13,7 @@
 
         <v-flex xs10 md3 offset-xs1 offset-md2>
           <v-layout row align-center justify-end>
-            <img height="48px" src="http://muhammadwahyudin.com/assets/images/logo.png">
+            <img height="48px" src="http://hyuwah.github.io/assets/images/logo.png">
             <span class="title font-weight-bold">.github</span>
             <span class="title font-weight-light">.io</span>
           </v-layout>
