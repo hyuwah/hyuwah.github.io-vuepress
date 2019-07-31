@@ -25,7 +25,7 @@
               <v-layout row wrap  align-center>
                 <v-flex xs3 sm3 md2>
                   <v-tooltip bottom>
-                    <a slot="activator" class="white--text" v-if="item.github" :href="item.github" target="_blank">
+                    <a slot="activator" class="white--text" v-if="item.github" :href="item.github" target="_blank" rel="noopener">
                       <v-icon large>fab fa-github</v-icon>
                     </a>
                     <span>Go to Project's Repo</span>
@@ -33,7 +33,7 @@
                 </v-flex>
                 <v-flex xs3 sm3 md2>
                   <v-tooltip bottom>
-                    <a slot="activator" v-if="item.playstore" :href="item.playstore" target="_blank">
+                    <a slot="activator" v-if="item.playstore" :href="item.playstore" target="_blank" rel="noopener">
                       <v-icon large>fab fa-google-play</v-icon>
                     </a>
                   <span>Go to Play Store</span>

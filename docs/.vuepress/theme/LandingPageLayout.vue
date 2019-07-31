@@ -31,7 +31,7 @@
                 <v-card-title primary-title>
                   <v-layout column align-center>
                     <v-avatar size="96px">
-                      <v-img src="http://hyuwah.github.io/assets/images/pp-square.webp"/>
+                      <v-img src="https://hyuwah.github.io/assets/images/pp-square.webp"/>
                     </v-avatar>
                   </v-layout>
                 </v-card-title>
@@ -49,13 +49,13 @@
                       :key="socmedItem.id"
                       class="socmed-item"
                     >
-                        <a :href="socmedItem.link" target="_blank" class="socmed-item">
+                        <a :href="socmedItem.link" target="_blank" rel="noopener" class="socmed-item">
                           <v-layout column >
                             <v-flex xs12>
                               <img :src="socmedItem.img" height="48px" :alt="socmedItem.title">
                             </v-flex>
                             <v-flex xs12>
-                              <span class="caption">{{socmedItem.title}}</span>
+                              <span class="subheading grey--text text--darken-4">{{socmedItem.title}}</span>
                             </v-flex>
                           </v-layout>
                         </a>
@@ -143,7 +143,7 @@ export default {
           link: "https://github.com/hyuwah",
         },
         {
-          title: "Linkedin",
+          title: "LinkedIn",
           img:
             "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1547297332/img_linkedin_gzqqg1.png",
           link: "https://www.linkedin.com/in/hyuwah/",
