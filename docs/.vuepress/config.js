@@ -5,7 +5,7 @@ module.exports = {
     head: [
         ['link', {
             rel: 'icon',
-            href: 'http://hyuwah.github.io/assets/favicon/favicon.ico?v=xQzbabgwXG'
+            href: 'https://hyuwah.github.io/assets/favicon/favicon.ico?v=xQzbabgwXG'
         }],
         ['script', {
             src: `https://sethusenthil.com/Product-Sans/api/font.js`

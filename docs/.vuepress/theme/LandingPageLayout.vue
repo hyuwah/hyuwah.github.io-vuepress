@@ -104,7 +104,7 @@
     </div>
 
     <!-- BOTTOM PARALLAX -->
-    <v-parallax height="300" src="http://hyuwah.github.io/assets/images/arduino.webp"></v-parallax>
+    <v-parallax height="300" src="https://hyuwah.github.io/assets/images/arduino.webp"></v-parallax>
     <!-- CONTACT SECTION -->
     <div class="elevation-4 pt-4 pb-4">
       <Contact/>

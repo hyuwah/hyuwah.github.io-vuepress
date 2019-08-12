@@ -28,7 +28,7 @@
                 required
             />
             <input type="hidden" name="_subject" value="New submission from hyuwah.github.io">
-            <input type="hidden" name="_next" value="http://hyuwah.github.io/thanks">
+            <input type="hidden" name="_next" value="https://hyuwah.github.io/thanks">
             <input type="text" name="_gotcha" style="display:none">
 
             <v-layout justify-end>
