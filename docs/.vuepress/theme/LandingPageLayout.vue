@@ -3,7 +3,7 @@
     <!-- PARALLAX HERO -->
     <v-parallax
       id="heroParallax"
-      src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1514133423/cattypefrenzy.gif"
+      src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1566016247/hyuwah.github.io/v2-header-alt.webp"
     >
       <v-layout align-center column justify-center class="ma-3">
         <h1 class="display-2 font-weight-bold mb-3 text-xs-center">MUHAMMAD WAHYUDIN</h1>

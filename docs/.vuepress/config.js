@@ -28,4 +28,5 @@ module.exports = {
             link: '/portfolio/'
         }]
     },
+    plugins: ['@vuepress/pwa'],
 }

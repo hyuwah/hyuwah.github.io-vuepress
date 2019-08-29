@@ -5,6 +5,7 @@
   "author": "Muhammad Wahyudin",
   "license": "MIT",
   "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.0.0-rc.1",
     "vuepress": "^1.0.3",
     "vuetify": "^1.5.16"
   },
