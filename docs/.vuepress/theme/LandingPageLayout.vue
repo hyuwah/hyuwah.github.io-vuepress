@@ -6,6 +6,11 @@
       src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1566016247/hyuwah.github.io/v2-header-alt.webp"
     >
       <v-layout align-center column justify-center class="ma-3">
+        <a href="https://www.credential.net/62f48fc6-dfef-4604-a900-b59a5d2cc17c" target="_blank" rel="noopener">
+         <v-avatar size="156px" class="mb-3">
+            <v-img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/14516874"/>
+         </v-avatar>
+        </a>
         <h1 class="display-2 font-weight-bold mb-3 text-xs-center">MUHAMMAD WAHYUDIN</h1>
         <h3
           class="font-weight-light text-xs-center"
@@ -29,7 +34,7 @@
             <v-hover>
               <v-card slot-scope="{hover}" :class="`card-rounded elevation-${hover?12:2}`">
                 <v-card-title primary-title>
-                  <v-layout column align-center>
+                  <v-layout row justify-center>
                     <v-avatar size="96px">
                       <v-img src="https://hyuwah.github.io/assets/images/pp-square.webp"/>
                     </v-avatar>
