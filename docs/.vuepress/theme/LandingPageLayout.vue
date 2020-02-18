@@ -103,24 +103,22 @@
           <PortfolioWidget />
 
           <!-- CODING STATS WIDGET -->
-          <!-- <v-flex xs12 sm10 md8 offset-sm1 offset-md2 class="pb-5 mt-5 mb-5">
-            <v-layout v-scroll-reveal.reset="{delay:250}" row class="mb-4" align-end>
+          <v-col cols=12 sm=10 md=8 offset-sm=1 offset-md=2 class="pb-5 mt-5 mb-5">
+            <v-row v-scroll-reveal.reset="{delay:250}" class="mb-4" align=end>
               <h2 class="display-2 white--text">Coding Stats</h2>
-            </v-layout>
-            <v-layout row wrap> -->
-          <!-- Coding activity Wakatime -->
-          <!-- <v-flex xs12 md6>
+            </v-row>
+            <v-row v-scroll-reveal.reset="{delay:250}">
+              <v-col cols=12 md=6>
                 <figure style="padding: 1em;"><embed src="https://wakatime.com/share/@hyuwah/52042bd7-8354-4496-8b7a-ca9e705df2d2.svg"></embed></figure>
-              </v-flex> -->
-          <!-- Language Wakatime -->
-          <!-- <v-flex xs12 md6>
+              </v-col>
+              <v-col cols=12 md=6>
                 <figure style="padding: 1em;"><embed src="https://wakatime.com/share/@hyuwah/ed51c99a-a0c7-4258-b42c-05d84ffed8d6.svg"></embed></figure>
-              </v-flex>
-            </v-layout>
-          </v-flex> -->
+              </v-col>
+            </v-row>
+          </v-col>
 
           <!-- CODING STATS APEXCHARTS -->
-          <CodingStats />
+          <!-- <CodingStats /> -->
 
           <!-- <Content/> -->
         </v-row>
