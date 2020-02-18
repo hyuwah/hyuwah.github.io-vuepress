@@ -1,11 +1,11 @@
 <template>
   <DefaultLayout>
     <v-container>
-      <v-layout row justify-center align-center>
-        <v-flex xs12>
+      <v-row justify="center" align="center">
+        <v-col cols=12>
           <Content/>
-        </v-flex>
-      </v-layout>
+        </v-col>
+      </v-row>
     </v-container>
   </DefaultLayout>
 </template>

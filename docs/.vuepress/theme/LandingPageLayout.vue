@@ -4,108 +4,137 @@
     <v-parallax
       id="heroParallax"
       src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1566016247/hyuwah.github.io/v2-header-alt.webp"
-      >
-      <v-layout align-center column justify-center class="ma-3 mb-1">
-        <v-avatar size="96px">
-          <v-img src="https://hyuwah.github.io/assets/images/pp-square.webp"/>
+    >
+    <v-row align=center>
+      <v-col align="center">
+        <v-avatar size="96px" class="mb-2">
+          <v-img src="https://hyuwah.github.io/assets/images/pp-square.webp" />
         </v-avatar>
-        <h1 class="display-2 font-weight-bold ma-3 mb-3 text-xs-center">MUHAMMAD WAHYUDIN</h1>
-        <h3
-          class="font-weight-light text-xs-center"
-        >Software Engineer -- Instrumentation &amp; Electronics Physicist</h3>
-      </v-layout>
+        <h1 class="display-2 font-weight-bold ma-3">
+          MUHAMMAD WAHYUDIN
+        </h1>
+        <h3 class="font-weight-light">
+          Software Engineer -- Instrumentation &amp; Electronics Physicist
+        </h3>
+      </v-col>
+    </v-row>
     </v-parallax>
 
     <div class="primary bg">
       <v-container>
-        <v-layout row wrap>
+        <v-row wrap>
           <!-- INTRO CARD -->
-          <v-flex
-            xs12
-            sm10
-            md8
-            offset-sm1
-            offset-md2
+          <v-col
+            cols=12
+            sm=10
+            md=8
+            offset-sm=1
+            offset-md=2
             class="pb-5"
             style="margin-top:-100px; z-index:1"
           >
             <v-hover>
-              <v-card slot-scope="{hover}" :class="`card-rounded elevation-${hover?12:2}`">
+              <v-card
+                hover
+                shaped
+              >
                 <v-card-title primary-title>
-                  <v-layout column align-center>
-                    <h1 class="primary--text mb-2">Hello There!</h1>
-                  <h2
-                    class="font-weight-light pl-4 pr-4 text-sm-center"
-                  >I'm Wahyu, physics graduate turned Google certified Associate Android Developer. Currently in love with Kotlin, but also have a crush on Flutter</h2>
-                  </v-layout>
+                  <v-col align=center>
+                    <h2 class="primary--text mb-2">Hello There!</h2>
+                    <h3 class="font-weight-light pl-4 pr-4 text-sm-center">
+                      I'm Wahyu, physics graduate turned Google certified
+                      Associate Android Developer. Currently in love with
+                      Kotlin, but also have a crush on Flutter
+                    </h3>
+                  </v-col>
                 </v-card-title>
-                <v-card-text class="pr-4 pl-4 pb-4 pt-0 text-xs-center">
-                  <v-layout column wrap class="mb-3">
-                    <a href="https://www.credential.net/62f48fc6-dfef-4604-a900-b59a5d2cc17c" target="_blank" rel="noopener">
-                      <v-avatar size="156px" class="mb-3">
-                          <v-img src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/14516874"/>
+                <v-card-text class="pr-4 pl-4 pb-4 pt-0 text-center">
+                  <v-col align=center class="mb-2">
+                    <a
+                      href="https://www.credential.net/62f48fc6-dfef-4604-a900-b59a5d2cc17c"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      <v-avatar size="156px" class="elevation-4">
+                        <v-img
+                          src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/14516874"
+                        />
                       </v-avatar>
                     </a>
-                  </v-layout>
-                  <v-layout row wrap justify-center>
-                    <v-flex
-                      xs4
-                      sm2
+                  </v-col>
+                  <v-row justify=center>
+                    <v-col
+                      cols=4
+                      sm=2
                       v-for="socmedItem in socmedItems"
                       :key="socmedItem.id"
                       class="socmed-item"
                     >
-                        <a :href="socmedItem.link" target="_blank" rel="noopener" class="socmed-item">
-                          <v-layout column >
-                            <v-flex xs12>
-                              <img :src="socmedItem.img" height="48px" :alt="socmedItem.title">
-                            </v-flex>
-                            <v-flex xs12>
-                              <span class="subheading grey--text text--darken-4">{{socmedItem.title}}</span>
-                            </v-flex>
-                          </v-layout>
-                        </a>
-                    </v-flex>
-                  </v-layout>
+                      <a
+                        :href="socmedItem.link"
+                        target="_blank"
+                        rel="noopener"
+                        class="socmed-item"
+                      >
+                        <v-row>
+                          <v-col cols=12>
+                            <img
+                              :src="socmedItem.img"
+                              height="48px"
+                              :alt="socmedItem.title"
+                            />
+                          </v-col>
+                          <v-col cols=12>
+                            <span
+                              class="subheading grey--text text--darken-4"
+                              >{{ socmedItem.title }}</span
+                            >
+                          </v-col>
+                        </v-row>
+                      </a>
+                    </v-col>
+                  </v-row>
                 </v-card-text>
               </v-card>
             </v-hover>
-          </v-flex>
+          </v-col>
 
           <!-- PORTFOLIO WIDGET -->
-          <PortfolioWidget/>
+          <PortfolioWidget />
 
           <!-- CODING STATS WIDGET -->
-          <v-flex xs12 sm10 md8 offset-sm1 offset-md2 class="pb-5 mt-5 mb-5">
+          <!-- <v-flex xs12 sm10 md8 offset-sm1 offset-md2 class="pb-5 mt-5 mb-5">
             <v-layout v-scroll-reveal.reset="{delay:250}" row class="mb-4" align-end>
               <h2 class="display-2 white--text">Coding Stats</h2>
             </v-layout>
-            <v-layout row wrap>
-              <!-- Coding activity Wakatime -->
-              <v-flex xs12 md6>
+            <v-layout row wrap> -->
+          <!-- Coding activity Wakatime -->
+          <!-- <v-flex xs12 md6>
                 <figure style="padding: 1em;"><embed src="https://wakatime.com/share/@hyuwah/52042bd7-8354-4496-8b7a-ca9e705df2d2.svg"></embed></figure>
-              </v-flex>
-              <!-- Language Wakatime -->              
-              <v-flex xs12 md6>
+              </v-flex> -->
+          <!-- Language Wakatime -->
+          <!-- <v-flex xs12 md6>
                 <figure style="padding: 1em;"><embed src="https://wakatime.com/share/@hyuwah/ed51c99a-a0c7-4258-b42c-05d84ffed8d6.svg"></embed></figure>
               </v-flex>
             </v-layout>
-          </v-flex>
+          </v-flex> -->
 
           <!-- CODING STATS APEXCHARTS -->
-          <!-- <CodingStats /> -->
-
+          <CodingStats />
 
           <!-- <Content/> -->
-        </v-layout>
+        </v-row>
       </v-container>
     </div>
 
     <!-- BOTTOM PARALLAX -->
-    <v-parallax height="300" src="https://hyuwah.github.io/assets/images/arduino.webp"></v-parallax>
+    <v-parallax
+      height="300"
+      src="https://hyuwah.github.io/assets/images/arduino.webp"
+    ></v-parallax>
     <!-- CONTACT SECTION -->
     <div class="elevation-4 pt-4 pb-4">
-      <Contact/>
+      <Contact />
     </div>
   </DefaultLayout>
 </template>
@@ -114,7 +143,7 @@
 import DefaultLayout from "./Layout";
 import Contact from "./LandingPage/Contact";
 import PortfolioWidget from "./LandingPage/PortfolioWidget";
-import CodingStats from "./LandingPage/CodingStats"
+import CodingStats from "./LandingPage/CodingStats";
 export default {
   components: {
     DefaultLayout,
@@ -132,31 +161,31 @@ export default {
         {
           title: "Sourcerer",
           img: "https://sourcerer.io/icons/logo-sharing.svg",
-          link: "https://sourcerer.io/hyuwah",
+          link: "https://sourcerer.io/hyuwah"
         },
         {
           title: "Github",
           img:
             "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1547297332/img_github_gsbxtx.png",
-          link: "https://github.com/hyuwah",
+          link: "https://github.com/hyuwah"
         },
         {
           title: "LinkedIn",
           img:
             "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1547297332/img_linkedin_gzqqg1.png",
-          link: "https://www.linkedin.com/in/hyuwah/",
+          link: "https://www.linkedin.com/in/hyuwah/"
         },
         {
           title: "Gitlab",
           img:
             "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1547297332/img_gitlab_rkwpqt.png",
-          link: "https://gitlab.com/hyuwah",
+          link: "https://gitlab.com/hyuwah"
         },
         {
           title: "Codepen",
           img:
             "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1547297332/img_codepen_uxypzn.png",
-          link: "https://codepen.io/hyuwah/",
+          link: "https://codepen.io/hyuwah/"
         }
       ]
     };

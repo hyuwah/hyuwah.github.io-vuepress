@@ -1,60 +1,51 @@
 <template>
-  <v-flex xs12 sm10 md8 offset-sm1 offset-md2 class="pb-5 mt-5 mb-5">
-    <v-layout v-scroll-reveal.reset="{ delay: 250 }" row class="mb-4" align-end>
+  <v-col
+    cols="12"
+    sm="10"
+    md="8"
+    offset-sm="1"
+    offset-md="2"
+    class="pb-5 mt-5 mb-5"
+  >
+    <v-row v-scroll-reveal.reset="{ delay: 250 }" class="mb-4" align-end>
       <h2 class="display-2 white--text">Coding Stats</h2>
-    </v-layout>
-    <!-- Pake Card? -->
-    <v-layout row wrap>
+    </v-row>
+    <v-row v-scroll-reveal.reset="{ delay: 250 }">
       <!-- Languages -->
-      <v-flex xs12 md8 lg5 ma-1>
+      <v-col cols="12" sm="6" md="12" lg="6">
         <v-card>
           <v-card-title primary-title>
-            <h1>Languages</h1>
+            <h2>Languages</h2>
           </v-card-title>
           <v-card-text>
-            <apexcharts
-              type="radialBar"
-              :options="chartOptions"
-              :series="langSeries"
-            />
+            <ClientOnly>
+              <apexcharts :options="chartOptions" :series="langSeries" />
+            </ClientOnly>
           </v-card-text>
         </v-card>
-      </v-flex>
+      </v-col>
       <!-- Activity -->
-      <v-flex xs12 md8 lg5 ma-1>
+      <v-col cols="12" sm="6" md="12" lg="6">
         <v-card>
           <v-card-title primary-title>
-            <h1>Activity</h1>
+            <h2>Activity</h2>
           </v-card-title>
-          <v-card-text>
-            <v-layout column text-xs-center>
-              <v-flex
-                xs4
-                sm2
-                v-for="caItem in caResponse"
-                :key="caItem.range.date"
-              >
-                <div>
-                  {{ caItem.range.text }} : {{ caItem.grand_total.text }}
-                </div>
-              </v-flex>
-            </v-layout>
+          <v-card-text class="ma-2">
+            <v-row v-for="caItem in caResponse" :key="caItem.range.date">
+              <div>{{ caItem.range.text }} : {{ caItem.grand_total.text }}</div>
+            </v-row>
           </v-card-text>
         </v-card>
-      </v-flex>
-    </v-layout>
-  </v-flex>
+      </v-col>
+    </v-row>
+  </v-col>
 </template>
 
 <script>
-import VueApexCharts from "vue-apexcharts";
 import axios from "axios";
 
 export default {
   name: "CodingStats",
-  components: {
-    apexcharts: VueApexCharts
-  },
   data: function() {
     return {
       langResponse: {},
@@ -78,65 +69,17 @@ export default {
     chartOptions() {
       return {
         chart: {
-          type: "radialBar"
-        },
-        plotOptions: {
-          radialBar: {
-            offsetY: 0,
-            startAngle: 0,
-            endAngle: 270,
-            hollow: {
-              margin: 5,
-              size: "30%",
-              background: "transparent",
-              image: undefined
-            },
-            dataLabels: {
-              name: {
-                show: false
-              },
-              value: {
-                show: false
-              }
-            }
-          }
+          type: "pie"
         },
         labels: this.langLabels,
-        legend: {
+          legend: {
           show: true,
-          floating: true,
-          fontSize: "14px",
-          position: "left",
-          offsetX: 64,
-          offsetY: 0,
-          labels: {
-            useSeriesColors: true
-          },
-          markers: {
-            size: 0
-          },
-          formatter: function(seriesName, opts) {
-            return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex];
-          },
+          position: "bottom",
           itemMargin: {
-            horizontal: 3
+            horizontal: 3,
+            vertical: 2
           }
         },
-        responsive: [
-          {
-            breakpoint: 480,
-            options: {
-              legend: {
-                show: true,
-                floating: true,
-                fontSize: "9px",
-                position: "left",
-                offsetX: -10,
-                offsetY: -20
-              }
-            }
-          }
-        ]
       };
     }
   },

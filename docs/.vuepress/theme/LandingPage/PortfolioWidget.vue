@@ -1,66 +1,70 @@
 <template>
-  <v-flex xs12 sm10 md8 offset-sm1 offset-md2 class="pb-5 mt-5 mb-5">
+  <v-col cols=12 sm=10 md=8 offset-sm=1 offset-md=2 class="pb-5 mt-5 mb-5">
     <!-- Section Title & More button -->
-    <v-layout v-scroll-reveal.reset="{delay:250}" row class="mb-4" align-end>
+    <v-row v-scroll-reveal.reset="{delay:250}" class="mb-4" align="end">
       <h2 class="display-2 white--text">Portfolios</h2>
       <v-spacer></v-spacer>
-      <v-btn flat dark small @click="toPortfolioPage">
+      <v-btn text dark small @click="toPortfolioPage">
         Show More
         <v-icon>chevron_right</v-icon>
       </v-btn>
-    </v-layout>
+    </v-row>
     <!-- Carousel -->
-    <v-carousel v-scroll-reveal.reset="{delay:350}" :height="getCarouselHeight()">
+    <v-carousel interval=10000 cycle show-arrows-on-hover v-scroll-reveal.reset="{delay:350}" :height="getCarouselHeight()">
       <v-carousel-item v-for="(item,i) in items.slice().reverse()" :key="i">
         <v-container fluid class="bg--scrim">
-          <v-layout row wrap class="pa-3">
-            <v-flex xs12 sm6>
+          <v-row class="pa-3">
+            <v-col align-self="center" cols=12 sm=6>
               <v-img width="100%" max-height="35vh" contain :src="item.src" />
-              <p class="subheading white--text mt-2">{{item.subtitle}}</p>
-            </v-flex>
-            <v-flex xs12 sm6 class="pa-3">
-              <div class="white--text title text-xs-center">{{item.title}}</div>
+              <p class="subheading white--text mt-2 text-center">{{item.subtitle}}</p>
+            </v-col>
+            <v-col cols=12 sm=6 class="pa-3">
+              <div class="white--text title text-center">{{item.title}}</div>
               <br />
               <div class="white--text">{{item.desc}}</div>
               <br />
-              <v-layout row wrap align-center>
-                <v-flex xs3 sm3 md2>
+              <v-row align="center">
+                <v-col cols=12 sm=3 md=2>
                   <v-tooltip bottom>
+                    <template v-slot:activator="{ on }">
                     <a
-                      slot="activator"
+                      v-on="on" 
                       class="white--text"
                       v-if="item.github"
                       :href="item.github"
                       target="_blank"
                       rel="noopener"
                     >
-                      <v-icon large>fab fa-github</v-icon>
+                      <v-icon class="mb-3" large>fab fa-github</v-icon>
                     </a>
+                    </template>
                     <span>Go to Project's Repo</span>
                   </v-tooltip>
-                </v-flex>
-                <v-flex xs3 sm3 md2>
+                </v-col>
+                <v-col cols=12 sm=3 md=2>
                   <v-tooltip bottom>
+                    <template v-slot:activator="{ on }">
                     <a
-                      slot="activator"
+                      v-on="on"
                       v-if="item.playstore"
                       :href="item.playstore"
                       target="_blank"
                       rel="noopener"
                     >
-                      <v-icon large>fab fa-google-play</v-icon>
+                      <v-icon class="mb-3" large>fab fa-google-play</v-icon>
                     </a>
+                    </template>
                     <span>Go to Play Store</span>
                   </v-tooltip>
-                </v-flex>
-              </v-layout>
+                </v-col>
+              </v-row>
               <br />
-            </v-flex>
-          </v-layout>
+            </v-col>
+          </v-row>
         </v-container>
       </v-carousel-item>
     </v-carousel>
-  </v-flex>
+  </v-col>
 </template>
 
 <script>
@@ -163,5 +167,8 @@ export default {
   background: rgba(0, 0, 0, 0.7);
   height: 100%;
   overflow-y: auto;
+}
+a {
+  text-decoration: none
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <v-toolbar app :inverted-scroll="$frontmatter.home">
+    <v-app-bar app :inverted-scroll="$frontmatter.home">
           <v-spacer></v-spacer>
       <v-toolbar-title @click="toHome" style="cursor:pointer">
         <v-layout align-center  class="primary--text">
@@ -11,7 +11,7 @@
         </v-layout>
         </v-toolbar-title>
         <v-spacer></v-spacer>
-    </v-toolbar>
+    </v-app-bar>
 </template>
 
 <script>

@@ -1,37 +1,39 @@
 <template>
-  <v-footer color="primary" dark height="auto">
-    <v-layout column class="mt-2">
-      <v-layout row wrap class="pa-2">
-        <v-flex xs10 md3 offset-xs1 offset-md2>
-          <!-- <h1 class="font-weight-regular">Links</h1>
-          <ul>
-            <li>Github Profile</li>
-            <li>Gitlab</li>
-            <li>Codepen</li>
-          </ul> -->
-        </v-flex>
+  <v-footer color="primary" dark height="auto" padless>
+    <v-row no-gutters class="mt-2">
+      <v-col cols=12>
+        <v-row class="pa-2">
 
-        <v-flex xs10 md3 offset-xs1 offset-md2>
-          <v-layout row align-center justify-end>
-            <img height="48px" src="https://hyuwah.github.io/assets/images/logo.png">
-            <h5 class="headline">hyuwah</h5>
-            <h5 class="headline font-weight-bold">.dev</h5>
-            <!-- <span class="title font-weight-bold">.github</span>
+          <v-col cols=10 md=3 offset=1 offset-md=8>
+            <v-row align="center" justify="end">
+              <img
+                height="48px"
+                src="https://hyuwah.github.io/assets/images/logo.png"
+              />
+              <h5 class="headline">hyuwah</h5>
+              <h5 class="headline font-weight-bold">.dev</h5>
+              <!-- <span class="title font-weight-bold">.github</span>
             <span class="title font-weight-light">.io</span> -->
-          </v-layout>
-          <v-layout row justify-end class="mt-2">
-            <span class="text-xs-right">A website to showcase the work of Muhammad Wahyudin</span>
-          </v-layout>
-        </v-flex>
-      </v-layout>
+            </v-row>
+            <v-row justify="end" class="mt-2">
+              <span class="text-right"
+                >A website to showcase the work of Muhammad Wahyudin</span
+              >
+            </v-row>
+          </v-col>
+        </v-row>
 
-      <v-flex xs12 class="primary darken-1 pa-2 text-xs-center font-weight-light mt-3">
-        <span class="px-3 primary--text text--lighten-4">
-          hyuwah &copy; {{new Date().getFullYear()}} | Made with
-          <v-icon small class="red--text text--lighten-2">favorite</v-icon> in Indonesia
-        </span>
-      </v-flex>
-    </v-layout>
+        <v-row justify="center"
+          class="primary darken-1 pa-2 font-weight-light ma-2"
+        >
+          <span class="px-3 primary--text text--lighten-4">
+            hyuwah &copy; {{ new Date().getFullYear() }} | Made with
+            <v-icon small class="red--text text--lighten-2">favorite</v-icon> in
+            Indonesia
+          </span>
+        </v-row>
+      </v-col>
+    </v-row>
   </v-footer>
 </template>
 
