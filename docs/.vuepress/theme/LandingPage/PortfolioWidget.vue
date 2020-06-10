@@ -97,12 +97,11 @@ export default {
         },
         {
           key: "3",
-          src:
-            "https://camo.githubusercontent.com/c7977b50e3405a0e4e0b72063f062005b55ffe06/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6879757761682d6769746875622d696f2f696d6167652f75706c6f61642f635f7363616c652c685f3634302f76313532323835373039342f6d63615f617961745f666574636865722e706e67",
+          src: "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1591783251/Muslim%20Companion%20Apps/mvp_ayah_prayer_qibla.gif",
           title: "Muslim Companion App",
-          subtitle: "Simple Random Ayat Fetcher from Quran",
+          subtitle: "Show quran verse, prayer times & qibla",
           desc:
-            "A work in progress app to learn MVP pattern. Data provided by Al Quran Cloud API. Transliteration & translation, share ayat",
+            "A work in progress app to show random quran verse, prayer times & qibla compass. Data provided by Al Quran Cloud API & Aladhan API.",
           github: "https://github.com/hyuwah/android-muslim-companion-app",
           playstore: "",
           type: "android"
@@ -123,8 +122,7 @@ export default {
         },
         {
           key: "5",
-          src:
-            "https://lh3.googleusercontent.com/DpEDoCjLkrQVbuBAXQSJ4FwBf3nc-XuASHBlAGSqUGhLlW3PksCaMx3YjyFa4N3_j4k=w1920-h928-rw",
+          src: "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1588829097/IdentitasKu/1200.gif",
           title: "IdentitasKu",
           subtitle:
             "App to help you save your important data that you don't have time to remember",
@@ -140,9 +138,9 @@ export default {
             "https://camo.githubusercontent.com/9c31c2ae13e5e79e6328a61ed94a540a429b7e88/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f3331342f312a644d7a494a6c543132686d53546b566b7a4e6e7845512e676966",
           title: "DraggableView",
           subtitle:
-            "DraggableView is an Android library to make floating draggable view easy.",
+            "Android library to make floating draggable view easy.",
           desc:
-            "DraggableView is an Android library to make floating draggable view easily using extensions on Kotlin & provided utils class on Java",
+            "DraggableView is an Android library to make floating draggable view easily inside app or overlaying other app",
           github: "https://github.com/hyuwah/DraggableView",
           playstore: "",
           type: "android library"
