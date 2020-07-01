@@ -45,7 +45,6 @@
           <v-layout justify-end>
             <v-btn
               dark
-              depressed
               type="submit"
               value="Send"
               color="green"

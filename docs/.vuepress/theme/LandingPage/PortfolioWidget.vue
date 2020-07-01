@@ -1,69 +1,56 @@
 <template>
-  <v-col cols=12 sm=10 md=8 offset-sm=1 offset-md=2 class="pb-5 mt-5 mb-5">
+  <v-col
+    cols="12"
+    sm="10"
+    md="8"
+    offset-sm="1"
+    offset-md="2"
+    class="pb-5 mt-5 mb-5"
+  >
     <!-- Section Title & More button -->
-    <v-row v-scroll-reveal.reset="{delay:250}" class="mb-4" align="end">
-      <h2 class="display-2 white--text">Portfolios</h2>
+    <v-row v-scroll-reveal="{ delay: 250 }" class="mb-4" align="end">
+      <h2 class="display-2 white--text">Featured Portfolios</h2>
       <v-spacer></v-spacer>
-      <v-btn text dark small @click="toPortfolioPage">
+      <v-btn text dark @click="toPortfolioPage">
         Show More
-        <v-icon>chevron_right</v-icon>
+        <v-icon right>chevron_right</v-icon>
       </v-btn>
     </v-row>
-    <!-- Carousel -->
-    <v-carousel interval=10000 cycle show-arrows-on-hover v-scroll-reveal.reset="{delay:350}" :height="getCarouselHeight()">
-      <v-carousel-item v-for="(item,i) in items.slice().reverse()" :key="i">
-        <v-container fluid class="bg--scrim">
+    <!-- Featured Portfolio -->
+    <v-row>
+      <v-col
+        v-scroll-reveal="{ delay: 250 }"
+        v-for="(item, i) in items.slice().reverse()"
+        :key="i"
+        cols="12"
+        md="12"
+        lg="6"
+      >
+        <v-card class="rounded-lg pl-2 pr-2 ">
           <v-row class="pa-3">
-            <v-col align-self="center" cols=12 sm=6>
-              <v-img width="100%" max-height="35vh" contain :src="item.src" />
-              <p class="subheading white--text mt-2 text-center">{{item.subtitle}}</p>
+            <v-col align-self="center" cols="12" sm="6">
+              <v-img width="100%" contain :src="item.src" />
             </v-col>
-            <v-col cols=12 sm=6 class="pa-3">
-              <div class="white--text title text-center">{{item.title}}</div>
-              <br />
-              <div class="white--text">{{item.desc}}</div>
-              <br />
-              <v-row align="center">
-                <v-col cols=12 sm=3 md=2>
-                  <v-tooltip bottom>
-                    <template v-slot:activator="{ on }">
-                    <a
-                      v-on="on" 
-                      class="white--text"
-                      v-if="item.github"
-                      :href="item.github"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <v-icon class="mb-3" large>fab fa-github</v-icon>
-                    </a>
-                    </template>
-                    <span>Go to Project's Repo</span>
-                  </v-tooltip>
-                </v-col>
-                <v-col cols=12 sm=3 md=2>
-                  <v-tooltip bottom>
-                    <template v-slot:activator="{ on }">
-                    <a
-                      v-on="on"
-                      v-if="item.playstore"
-                      :href="item.playstore"
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      <v-icon class="mb-3" large>fab fa-google-play</v-icon>
-                    </a>
-                    </template>
-                    <span>Go to Play Store</span>
-                  </v-tooltip>
-                </v-col>
-              </v-row>
-              <br />
+            <v-col cols="12" sm="6" class="pa-3">
+              <div class="text-h6 font-weight-bold">{{ item.title }}</div>
+              <p class="text-subtitle-2 text--secondary">{{ item.subtitle }}</p>
+              <p class="text-body-1">{{ item.desc }}</p>
             </v-col>
           </v-row>
-        </v-container>
-      </v-carousel-item>
-    </v-carousel>
+          <v-card-actions>
+            <v-spacer />
+            <v-btn v-if="item.github" outlined class="ma-2" @click="toUrl(item.github)">
+              <v-icon left dark>fab fa-github</v-icon>
+              Repository
+            </v-btn>
+            <v-btn v-if="item.playstore" outlined class="ma-2" @click="toUrl(item.playstore)">
+              <v-icon left dark>fab fa-google-play</v-icon>
+              Playstore
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-col>
+    </v-row>
   </v-col>
 </template>
 
@@ -81,7 +68,7 @@ export default {
           desc: `TAZPA Software is a software interface for TAZPA, a system to measure zeta potential of a colloidal sample. Part of my thesis on Universitas Padjadjaran.`,
           github: "https://github.com/hyuwah/TAZPASoftware",
           playstore: "",
-          type: ".net desktop"
+          type: ".net desktop",
         },
         {
           key: "2",
@@ -93,23 +80,22 @@ export default {
             "An Indonesia Android Kejar Intermediate class final project. Data provided by The Movie Database (TMDb) API. Search movies, see trailer & review. ",
           github: "https://github.com/hyuwah/movieku",
           playstore: "",
-          type: "android"
+          type: "android",
         },
         {
           key: "3",
-          src: "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1591783251/Muslim%20Companion%20Apps/mvp_ayah_prayer_qibla.gif",
+          src:
+            "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1591783251/Muslim%20Companion%20Apps/mvp_ayah_prayer_qibla.gif",
           title: "Muslim Companion App",
           subtitle: "Show quran verse, prayer times & qibla",
           desc:
             "A work in progress app to show random quran verse, prayer times & qibla compass. Data provided by Al Quran Cloud API & Aladhan API.",
           github: "https://github.com/hyuwah/android-muslim-companion-app",
           playstore: "",
-          type: "android"
+          type: "android",
         },
         {
           key: "4",
-          //src:
-          //  "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1520599860/catatanku-banner_uzx2tt.png",
           src:
             "https://lh3.googleusercontent.com/0FsJRDl4zaxo4LrIfgXtAe9C0dETEPTOn4VkJEikGRoutPOaXsvlsDO0ZQuonIK-uocT=w1920-h929-rw",
           title: "CatatanKu",
@@ -118,11 +104,12 @@ export default {
           github: "https://github.com/hyuwah/android-catatanku",
           playstore:
             "https://play.google.com/store/apps/details?id=io.github.hyuwah.catatanku&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
-          type: "android"
+          type: "android",
         },
         {
           key: "5",
-          src: "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1588829097/IdentitasKu/1200.gif",
+          src:
+            "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1588829097/IdentitasKu/1200.gif",
           title: "IdentitasKu",
           subtitle:
             "App to help you save your important data that you don't have time to remember",
@@ -130,22 +117,21 @@ export default {
           github: "https://github.com/hyuwah/IdentitasKu",
           playstore:
             "https://play.google.com/store/apps/details?id=com.muhammadwahyudin.identitasku",
-          type: "android"
+          type: "android",
         },
         {
           key: "6",
           src:
             "https://camo.githubusercontent.com/9c31c2ae13e5e79e6328a61ed94a540a429b7e88/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f3331342f312a644d7a494a6c543132686d53546b566b7a4e6e7845512e676966",
           title: "DraggableView",
-          subtitle:
-            "Android library to make floating draggable view easy.",
+          subtitle: "Android library to make floating draggable view easy.",
           desc:
             "DraggableView is an Android library to make floating draggable view easily inside app or overlaying other app",
           github: "https://github.com/hyuwah/DraggableView",
           playstore: "",
-          type: "android library"
-        }
-      ]
+          type: "android library",
+        },
+      ],
     };
   },
   methods: {
@@ -155,8 +141,12 @@ export default {
     getCarouselHeight() {
       if (this.$vuetify.breakpoint.name == "xs") return "75vh";
       else return "55vh";
+    },
+    toUrl(url) {
+      console.log(url)
+      window.open(url, "_blank")
     }
-  }
+  },
 };
 </script>
 
@@ -167,6 +157,6 @@ export default {
   overflow-y: auto;
 }
 a {
-  text-decoration: none
+  text-decoration: none;
 }
 </style>

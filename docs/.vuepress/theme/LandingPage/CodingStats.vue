@@ -7,12 +7,12 @@
     offset-md="2"
     class="pb-5 mt-5 mb-5"
   >
-    <v-row v-scroll-reveal.reset="{ delay: 250 }" class="mb-4" align-end>
+    <v-row class="mb-4" align-end>
       <h2 class="display-2 white--text">Coding Stats</h2>
     </v-row>
-    <v-row v-scroll-reveal.reset="{ delay: 250 }">
+    <v-row>
       <!-- Languages -->
-      <v-col cols="12" sm="6" md="12" lg="6">
+      <v-col cols="12" md="12" lg="6">
         <v-card>
           <v-card-title primary-title>
             <h2>Languages</h2>
@@ -25,7 +25,7 @@
         </v-card>
       </v-col>
       <!-- Activity -->
-      <v-col cols="12" sm="6" md="12" lg="6">
+      <v-col cols="12" md="12" lg="6">
         <v-card>
           <v-card-title primary-title>
             <h2>Activity</h2>

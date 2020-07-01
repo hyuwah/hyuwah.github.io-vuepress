@@ -14,7 +14,7 @@
           MUHAMMAD WAHYUDIN
         </h1>
         <h3 class="font-weight-light">
-          Software Engineer -- Instrumentation &amp; Electronics Physicist
+          Android Software Engineer -- Instrumentation &amp; Electronics Physicist
         </h3>
       </v-col>
     </v-row>
@@ -104,10 +104,10 @@
 
           <!-- CODING STATS WIDGET -->
           <v-col cols=12 sm=10 md=8 offset-sm=1 offset-md=2 class="pb-5 mt-5 mb-5">
-            <v-row v-scroll-reveal.reset="{delay:250}" class="mb-4" align=end>
+            <v-row v-scroll-reveal="{delay:500}" class="mb-4" align=end>
               <h2 class="display-2 white--text">Coding Stats</h2>
             </v-row>
-            <v-row v-scroll-reveal.reset="{delay:250}">
+            <v-row v-scroll-reveal="{delay:500}">
               <v-col cols=12 md=6>
                 <figure style="padding: 1em;"><embed src="https://wakatime.com/share/@hyuwah/52042bd7-8354-4496-8b7a-ca9e705df2d2.svg"></embed></figure>
               </v-col>
@@ -115,10 +115,11 @@
                 <figure style="padding: 1em;"><embed src="https://wakatime.com/share/@hyuwah/ed51c99a-a0c7-4258-b42c-05d84ffed8d6.svg"></embed></figure>
               </v-col>
             </v-row>
+            <v-btn text class="blue--text" @click="toggleCodingStats()">.</v-btn>
           </v-col>
 
           <!-- CODING STATS APEXCHARTS -->
-          <!-- <CodingStats /> -->
+          <CodingStats v-if="altCodingStats" />
 
           <!-- <Content/> -->
         </v-row>
@@ -151,6 +152,7 @@ export default {
   },
   data() {
     return {
+      altCodingStats: false,
       window: {
         width: 0,
         height: 0
@@ -174,10 +176,10 @@ export default {
           link: "https://www.linkedin.com/in/hyuwah/"
         },
         {
-          title: "Gitlab",
+          title: "dev.to",
           img:
-            "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1547297332/img_gitlab_rkwpqt.png",
-          link: "https://gitlab.com/hyuwah"
+            "https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg",
+          link: "https://dev.to/hyuwah"
         },
         {
           title: "Codepen",
@@ -189,6 +191,9 @@ export default {
     };
   },
   methods: {
+    toggleCodingStats() {
+      this.altCodingStats = !this.altCodingStats
+    },
     handleResize() {
       this.window.width = window.innerWidth;
       this.window.height = window.innerHeight;
