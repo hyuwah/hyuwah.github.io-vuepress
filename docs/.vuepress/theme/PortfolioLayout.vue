@@ -1,17 +1,18 @@
 <template>
   <DefaultLayout>
+    <div class="grey lighten-4">
       <v-container>
         <v-col cols="12">
           <!-- <Content/> -->
 
           <!-- Section Title & More button -->
-          <v-row class="mb-4">
+          <v-row class="ma-4">
              <v-btn outlined @click="toHome()">
               <v-icon left>chevron_left</v-icon>
               Back
             </v-btn>
           </v-row>
-          <v-row v-scroll-reveal="{ delay: 250 }" class="mb-4" align="end">
+          <v-row v-scroll-reveal="{ delay: 250 }" class="ma-4" align="end">
             <h2 class="display-2">Portfolios</h2>
           </v-row>
           <!-- Featured Portfolio -->
@@ -63,6 +64,7 @@
           </v-row>
         </v-col>
     </v-container>
+    </div>
   </DefaultLayout>
 </template>
 
