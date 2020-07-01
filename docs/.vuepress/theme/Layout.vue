@@ -1,9 +1,9 @@
 <template>
   <v-app class="theme-container gfont">
     <Navbar/>
-      <v-content>
+      <v-main>
         <slot/>
-      </v-content>
+      </v-main>
     <Footer/>
   </v-app>
 </template>

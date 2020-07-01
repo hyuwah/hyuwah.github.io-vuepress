@@ -7,10 +7,10 @@
     offset-md="2"
     class="pb-5 mt-5 mb-5"
   >
-    <v-row class="mb-4" align-end>
+    <v-row v-scroll-reveal="{ delay: 250 }" class="mb-4" align-end>
       <h2 class="display-2 white--text">Coding Stats</h2>
     </v-row>
-    <v-row>
+    <v-row v-scroll-reveal="{ delay: 250 }">
       <!-- Languages -->
       <v-col cols="12" md="12" lg="6">
         <v-card>
@@ -22,6 +22,10 @@
               <apexcharts :options="chartOptions" :series="langSeries" />
             </ClientOnly>
           </v-card-text>
+          <v-card-actions>
+            <v-spacer/>
+            <span class="text-caption">Over last 7 days</span>
+          </v-card-actions>
         </v-card>
       </v-col>
       <!-- Activity -->
@@ -35,6 +39,10 @@
               <div>{{ caItem.range.text }} : {{ caItem.grand_total.text }}</div>
             </v-row>
           </v-card-text>
+          <v-card-actions>
+            <v-spacer/>
+            <span class="text-caption">Over last 7 days</span>
+          </v-card-actions>
         </v-card>
       </v-col>
     </v-row>
@@ -43,6 +51,7 @@
 
 <script>
 import axios from "axios";
+import jsonp from "jsonp";
 
 export default {
   name: "CodingStats",
@@ -52,7 +61,7 @@ export default {
       langSeries: [],
       langLabels: [],
       caResponse: {},
-      caSeries: []
+      caSeries: [],
     };
   },
   computed: {
@@ -62,54 +71,55 @@ export default {
         dataLabels: {
           formatter: function(val) {
             return val.toFixed(2) + "%";
-          }
-        }
+          },
+        },
       };
     },
     chartOptions() {
       return {
         chart: {
-          type: "pie"
+          type: "pie",
         },
         labels: this.langLabels,
-          legend: {
+        legend: {
           show: true,
           position: "bottom",
           itemMargin: {
             horizontal: 3,
-            vertical: 2
-          }
+            vertical: 2,
+          },
         },
       };
-    }
+    },
   },
   beforeMount() {
-    // Enable cors chrome addon dulu biar ga network error (tapi nanti ga bisa youtube)
     // Languages
-    axios
-      .get(
-        "https://wakatime.com/share/@hyuwah/9235ab47-5904-489c-9a70-2c141cbe079b.json"
-      )
-      .then(res => {
-        this.langResponse = res.data.data;
-        this.langSeries = this.langResponse.map(item => item.percent);
-        this.langLabels = this.langResponse.map(item => item.name);
-      })
-      .catch(err => {
-        this.langResponse = err;
-      });
+    jsonp(
+      "https://wakatime.com/share/@hyuwah/9235ab47-5904-489c-9a70-2c141cbe079b.json",
+      null,
+      (err, data) => {
+        if (err) {
+          console.error(err.message);
+        } else {
+          this.langResponse = data.data;
+          this.langSeries = this.langResponse.map((item) => item.percent);
+          this.langLabels = this.langResponse.map((item) => item.name);
+        }
+      }
+    );
 
-    // Coding Activity
-    axios
-      .get(
-        "https://wakatime.com/share/@hyuwah/0c9861c2-73ad-4f05-9c82-abe115b163e1.json"
-      )
-      .then(res => {
-        this.caResponse = res.data.data.reverse();
-      })
-      .catch(err => {
-        this.caResponse = err;
-      });
-  }
+    // Coding Activities
+    jsonp(
+      "https://wakatime.com/share/@hyuwah/0c9861c2-73ad-4f05-9c82-abe115b163e1.json",
+      null,
+      (err, data) => {
+        if (err) {
+          console.error(err.message);
+        } else {
+          this.caResponse = data.data.reverse();
+        }
+      }
+    );
+  },
 };
 </script>

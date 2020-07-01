@@ -102,24 +102,8 @@
           <!-- PORTFOLIO WIDGET -->
           <PortfolioWidget />
 
-          <!-- CODING STATS WIDGET -->
-          <v-col cols=12 sm=10 md=8 offset-sm=1 offset-md=2 class="pb-5 mt-5 mb-5">
-            <v-row v-scroll-reveal="{delay:500}" class="mb-4" align=end>
-              <h2 class="display-2 white--text">Coding Stats</h2>
-            </v-row>
-            <v-row v-scroll-reveal="{delay:500}">
-              <v-col cols=12 md=6>
-                <figure style="padding: 1em;"><embed src="https://wakatime.com/share/@hyuwah/52042bd7-8354-4496-8b7a-ca9e705df2d2.svg"></embed></figure>
-              </v-col>
-              <v-col cols=12 md=6>
-                <figure style="padding: 1em;"><embed src="https://wakatime.com/share/@hyuwah/ed51c99a-a0c7-4258-b42c-05d84ffed8d6.svg"></embed></figure>
-              </v-col>
-            </v-row>
-            <v-btn text class="blue--text" @click="toggleCodingStats()">.</v-btn>
-          </v-col>
-
           <!-- CODING STATS APEXCHARTS -->
-          <CodingStats v-if="altCodingStats" />
+          <CodingStats/>
 
           <!-- <Content/> -->
         </v-row>
@@ -152,7 +136,6 @@ export default {
   },
   data() {
     return {
-      altCodingStats: false,
       window: {
         width: 0,
         height: 0
@@ -191,9 +174,6 @@ export default {
     };
   },
   methods: {
-    toggleCodingStats() {
-      this.altCodingStats = !this.altCodingStats
-    },
     handleResize() {
       this.window.width = window.innerWidth;
       this.window.height = window.innerHeight;
