@@ -2,6 +2,7 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import VueContentPlaceholder from "vue-content-placeholders";
+import VueScrollReveal from "vue-scroll-reveal";
 
 // Helpers
 import colors from 'vuetify/es5/util/colors'
@@ -10,7 +11,8 @@ export default ({
     Vue, // the version of Vue being used in the VuePress app
     options, // the options for the root Vue instance
     router, // the router instance for the app
-    siteData // site metadata
+    siteData, // site metadata,
+    isServer
   }) => {
     // ...apply enhancements to the app
     Vue.use(Vuetify)
@@ -28,18 +30,21 @@ export default ({
     })
     Vue.use(VueContentPlaceholder)
     
-    import('gridsome-scroll-reveal').then(module => {
-      Vue.use(module.default, {
-        reset: false,
-        class: 'v-scroll-reveal',
-        duration: 500,
-        distance: '20px',
-        mobile: true,
-        interval: 600
+    if(isServer) {
+      Vue.use({
+        install(Vue, defaultOptions) {
+          Vue.directive('scroll-reveal', {
+            inserted: (el, binding) => {},
+            update: (el, binding) => {},
+          });
+        }
       })
-    }).catch(error => {
-      console.log(error);
-    });
+      Vue.prototype.$sr = {
+        isSupported() {},
+        sync() {},
+        reveal() {},
+      }
+    } else Vue.use(VueScrollReveal)
 
     import('vue-apexcharts').then(module => {
       Vue.component('apexcharts', module.default)
