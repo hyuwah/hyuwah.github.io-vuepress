@@ -101,7 +101,7 @@
           <PortfolioWidget />
 
           <!-- CODING STATS APEXCHARTS -->
-          <CodingStats/>
+          <!-- <CodingStats/> -->
 
           <!-- <Content/> -->
         </v-row>

@@ -10,9 +10,6 @@ module.exports = {
         ['script', {
             src: `https://sethusenthil.com/Product-Sans/api/font.js`
         }],
-        // ['script', {
-        //     src: `https://cdn.jsdelivr.net/npm/vue-scroll-reveal@1.0.11/dist/vue-scroll-reveal.min.js`
-        // }],
         ['link', {
             rel: 'stylesheet',
             href: `https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css`

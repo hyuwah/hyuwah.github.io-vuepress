@@ -28,13 +28,15 @@ export default ({
     })
     Vue.use(VueContentPlaceholder)
     
-    import('vue-scroll-reveal').then(module => {
+    import('gridsome-scroll-reveal').then(module => {
       Vue.use(module.default)
-    })
+    }).catch(error => {
+      console.log(error);
+    });
 
     import('vue-apexcharts').then(module => {
       Vue.component('apexcharts', module.default)
     }).catch(error => {
-      
+      console.log(error);
     });
   }
