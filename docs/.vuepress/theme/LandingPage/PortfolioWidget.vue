@@ -9,7 +9,7 @@
   >
     <!-- Section Title & More button -->
     <v-row v-scroll-reveal="{ delay: 250 }" class="mt-2 mb-4 mr-2 ml-2" align="end">
-      <h1 class="primary--text">Featured Portfolios</h1>
+      <h1 class="primary--text">Featured Open Sources</h1>
       <v-spacer></v-spacer>
       <v-btn rounded color="primary" @click="toPortfolioPage">
         Show More

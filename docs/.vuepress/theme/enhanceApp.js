@@ -2,7 +2,6 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 import 'material-design-icons-iconfont/dist/material-design-icons.css'
 import VueContentPlaceholder from "vue-content-placeholders";
-import VueScrollReveal from "vue-scroll-reveal";
 
 // Helpers
 import colors from 'vuetify/es5/util/colors'
@@ -30,21 +29,27 @@ export default ({
     })
     Vue.use(VueContentPlaceholder)
     
-    if(isServer) {
-      Vue.use({
-        install(Vue, defaultOptions) {
-          Vue.directive('scroll-reveal', {
-            inserted: (el, binding) => {},
-            update: (el, binding) => {},
-          });
+    import('vue-scroll-reveal').then(module => {
+      if(isServer) {
+        Vue.use({
+          install(Vue, defaultOptions) {
+            Vue.directive('scroll-reveal', {
+              inserted: (el, binding) => {},
+              update: (el, binding) => {},
+            });
+          }
+        })
+        Vue.prototype.$sr = {
+          isSupported() {},
+          sync() {},
+          reveal() {},
         }
-      })
-      Vue.prototype.$sr = {
-        isSupported() {},
-        sync() {},
-        reveal() {},
+      } else {
+        Vue.use(module.default)
       }
-    } else Vue.use(VueScrollReveal)
+    }).catch(error => {
+      console.log(error);
+    });
 
     import('vue-apexcharts').then(module => {
       Vue.component('apexcharts', module.default)
