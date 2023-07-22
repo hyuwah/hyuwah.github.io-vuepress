@@ -11,10 +11,10 @@
           <v-img src="https://hyuwah.github.io/assets/images/pp-square.webp" />
         </v-avatar>
         <h1 class="display-2 font-weight-bold ma-3">
-          MUHAMMAD WAHYUDIN
+          MUHAMAD WAHYUDIN
         </h1>
         <h3 class="font-weight-light">
-          Android Software Engineer -- Instrumentation &amp; Electronics Physicist
+          Software Engineer - Android
         </h3>
       </v-col>
     </v-row>
@@ -39,13 +39,11 @@
                 shaped
               >
                 <v-card-title primary-title>
-                  <v-col align=center>
+                  <v-col align=center >
                     <h2 class="primary--text mb-2">Hello There!</h2>
-                    <h3 class="font-weight-light pl-4 pr-4 text-sm-center">
-                      I'm Wahyu, physics graduate turned Google certified
-                      Associate Android Developer. Currently in love with
-                      Kotlin, but also have a crush on Flutter
-                    </h3>
+                    <h5 class="font-weight-light" style="word-break: break-word">
+                      I'm Wahyu, a Software Engineer handling mobile development specifically on Android with 5+ years of experience in the startup industry. I was a Google Certified Associate Android Developer from 2019 until 2022. I am passionate about creating innovative and user-friendly mobile apps, and I am always looking for new ways to use technology to solve real-world problems.
+                    </h5>
                   </v-col>
                 </v-card-title>
                 <v-card-text class="pr-4 pl-4 pb-4 pt-0 text-center">
@@ -55,14 +53,14 @@
                       target="_blank"
                       rel="noopener"
                     >
-                      <v-avatar size="156px" class="elevation-4">
+                      <v-avatar size="128px" class="elevation-4">
                         <v-img
-                          src="https://api.accredible.com/v1/frontend/credential_website_embed_image/badge/14516874"
+                          src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1689983366/hyuwah.github.io/associate-android-dev-badge-kotlin.png"
                         />
                       </v-avatar>
                     </a>
                   </v-col>
-                  <v-row justify=center>
+                  <v-row class="mt-4" justify=center>
                     <v-col
                       cols=4
                       sm=2
@@ -77,16 +75,16 @@
                         class="socmed-item"
                       >
                         <v-row>
-                          <v-col cols=12>
+                          <v-col cols=12 class="pb-0">
                             <img
                               :src="socmedItem.img"
                               height="48px"
                               :alt="socmedItem.title"
                             />
                           </v-col>
-                          <v-col cols=12>
+                          <v-col cols=12 class="pt-0">
                             <span
-                              class="subheading grey--text text--darken-4"
+                              class="font-weight-medium grey--text text--darken-4"
                               >{{ socmedItem.title }}</span
                             >
                           </v-col>
@@ -142,11 +140,6 @@ export default {
       },
       socmedItems: [
         {
-          title: "Sourcerer",
-          img: "https://sourcerer.io/icons/logo-sharing.svg",
-          link: "https://sourcerer.io/hyuwah"
-        },
-        {
           title: "Github",
           img:
             "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1547297332/img_github_gsbxtx.png",
@@ -159,7 +152,7 @@ export default {
           link: "https://www.linkedin.com/in/hyuwah/"
         },
         {
-          title: "dev.to",
+          title: "DEV.to",
           img:
             "https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg",
           link: "https://dev.to/hyuwah"

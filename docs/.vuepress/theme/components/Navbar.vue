@@ -4,8 +4,8 @@
       <v-toolbar-title @click="toHome" style="cursor:pointer">
         <v-layout align-center  class="primary--text">
         <img height="36px" src="https://hyuwah.github.io/assets/images/logo.png"/>
-        <h5 class="headline">hyuwah</h5>
-        <h5 class="headline font-weight-bold">.dev</h5>
+        <h5 class="headline font-weight-bold">hyuwah</h5>
+        <h5 class="headline">.my.id</h5>
         <!-- <span class="font-weight-bold">.github</span>
         <span class="font-weight-light">.io</span> -->
         </v-layout>

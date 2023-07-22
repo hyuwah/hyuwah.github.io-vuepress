@@ -10,14 +10,14 @@
                 height="48px"
                 src="https://hyuwah.github.io/assets/images/logo.png"
               />
-              <h5 class="headline">hyuwah</h5>
-              <h5 class="headline font-weight-bold">.dev</h5>
+              <h5 class="headline font-weight-bold">hyuwah</h5>
+              <h5 class="headline">.my.id</h5>
               <!-- <span class="title font-weight-bold">.github</span>
             <span class="title font-weight-light">.io</span> -->
             </v-row>
             <v-row justify="end" class="mt-2">
               <span class="text-right"
-                >A website to showcase the work of Muhammad Wahyudin</span
+                >A website to showcase the work of Muhamad Wahyudin</span
               >
             </v-row>
           </v-col>

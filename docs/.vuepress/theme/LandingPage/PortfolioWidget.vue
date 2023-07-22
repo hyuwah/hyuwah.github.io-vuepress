@@ -106,39 +106,6 @@ export default {
           type: "android",
         },
         {
-          key: "5",
-          src:
-            "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1588829097/IdentitasKu/1200.gif",
-          title: "IdentitasKu",
-          subtitle:
-            "App to help you save your important data that you don't have time to remember",
-          desc: `Save your ID card, handphone number, address data in a centralized way. Send those data to other applications such as chat app. Or copy the data wherever the data is needed. Data protected with password / fingerprint & encryption`,
-          github: {
-            url: "https://github.com/hyuwah/IdentitasKu",
-            stars: "https://img.shields.io/github/stars/hyuwah/IdentitasKu?style=social",
-            forks: "https://img.shields.io/github/forks/hyuwah/IdentitasKu?style=social",
-          },
-          playstore:
-            "https://play.google.com/store/apps/details?id=com.muhammadwahyudin.identitasku",
-          type: "android",
-        },
-        {
-          key: "6",
-          src:
-            "https://camo.githubusercontent.com/9c31c2ae13e5e79e6328a61ed94a540a429b7e88/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f3331342f312a644d7a494a6c543132686d53546b566b7a4e6e7845512e676966",
-          title: "DraggableView",
-          subtitle: "Android library to make floating draggable view easy.",
-          desc:
-            "DraggableView is an Android library to make floating draggable view easily inside app or overlaying other app",
-          github: {
-            url: "https://github.com/hyuwah/DraggableView",
-            stars: "https://img.shields.io/github/stars/hyuwah/DraggableView?style=social",
-            forks: "https://img.shields.io/github/forks/hyuwah/DraggableView?style=social",
-          },
-          playstore: "",
-          type: "android library",
-        },
-        {
           key: "7",
           src:
             "https://camo.githubusercontent.com/51a62edccd651596f52cf46e61f59235afc314b0/68747470733a2f2f7265732e636c6f7564696e6172792e636f6d2f6879757761682d6769746875622d696f2f696d6167652f75706c6f61642f76313539323434383137302f476974687562557365724578706c6f7265722f696e69742d757365722d736f6369616c2d6f7074696d697a65642e676966",
@@ -169,6 +136,39 @@ export default {
           },
           playstore: "",
           type: "android",
+        },
+        {
+          key: "98",
+          src:
+            "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1588829097/IdentitasKu/1200.gif",
+          title: "IdentitasKu",
+          subtitle:
+            "App to help you save your important data that you don't have time to remember",
+          desc: `Save your ID card, handphone number, address data in a centralized way. Send those data to other applications such as chat app. Or copy the data wherever the data is needed. Data protected with password / fingerprint & encryption`,
+          github: {
+            url: "https://github.com/hyuwah/IdentitasKu",
+            stars: "https://img.shields.io/github/stars/hyuwah/IdentitasKu?style=social",
+            forks: "https://img.shields.io/github/forks/hyuwah/IdentitasKu?style=social",
+          },
+          playstore:
+            "https://play.google.com/store/apps/details?id=com.muhammadwahyudin.identitasku",
+          type: "android",
+        },
+        {
+          key: "99",
+          src:
+            "https://camo.githubusercontent.com/9c31c2ae13e5e79e6328a61ed94a540a429b7e88/68747470733a2f2f6d69726f2e6d656469756d2e636f6d2f6d61782f3331342f312a644d7a494a6c543132686d53546b566b7a4e6e7845512e676966",
+          title: "DraggableView",
+          subtitle: "Android library to make floating draggable view easy.",
+          desc:
+            "DraggableView is an Android library to make floating draggable view easily inside app or overlaying other app",
+          github: {
+            url: "https://github.com/hyuwah/DraggableView",
+            stars: "https://img.shields.io/github/stars/hyuwah/DraggableView?style=social",
+            forks: "https://img.shields.io/github/forks/hyuwah/DraggableView?style=social",
+          },
+          playstore: "",
+          type: "android library",
         }
       ],
     };

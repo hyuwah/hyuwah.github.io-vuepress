@@ -1,7 +1,7 @@
 module.exports = {
     base: '/v2/',
-    title: 'Muhammad Wahyudin\'s Page',
-    description: 'Software Developer - Instrumentation & Electronics Physicist - Technology Enthusiast',
+    title: 'Muhamad Wahyudin\'s Page',
+    description: 'Software Engineer - Android',
     head: [
         ['link', {
             rel: 'icon',
