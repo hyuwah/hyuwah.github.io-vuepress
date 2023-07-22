@@ -8,7 +8,7 @@
     <v-row align=center>
       <v-col align="center">
         <v-avatar size="96px" class="mb-2">
-          <v-img src="https://hyuwah.github.io/assets/images/pp-square.webp" />
+          <v-img src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1690004613/hyuwah.github.io/linkedin-pic.jpg" />
         </v-avatar>
         <h1 class="display-2 font-weight-bold ma-3">
           MUHAMAD WAHYUDIN
@@ -20,7 +20,7 @@
     </v-row>
     </v-parallax>
 
-    <div class="primary bg">
+    <div class="grey lighten-4">
       <v-container>
         <v-row wrap>
           <!-- INTRO CARD -->
@@ -38,7 +38,7 @@
                 hover
                 shaped
               >
-                <v-card-title primary-title>
+                <v-card-title primary-title class="pb-0">
                   <v-col align=center >
                     <h2 class="primary--text mb-2">Hello There!</h2>
                     <h5 class="font-weight-light" style="word-break: break-word">

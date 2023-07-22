@@ -29,7 +29,14 @@ export default ({
     Vue.use(VueContentPlaceholder)
     
     import('gridsome-scroll-reveal').then(module => {
-      Vue.use(module.default)
+      Vue.use(module.default, {
+        reset: false,
+        class: 'v-scroll-reveal',
+        duration: 500,
+        distance: '20px',
+        mobile: true,
+        interval: 600
+      })
     }).catch(error => {
       console.log(error);
     });

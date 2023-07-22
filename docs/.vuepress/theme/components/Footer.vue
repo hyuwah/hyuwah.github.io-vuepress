@@ -1,6 +1,6 @@
 <template>
   <v-footer color="primary" dark height="auto" padless>
-    <v-row no-gutters class="mt-2">
+    <v-row no-gutters class="mt-6">
       <v-col cols=12>
         <v-row class="pa-2">
 
@@ -24,10 +24,10 @@
         </v-row>
 
         <v-row justify="center"
-          class="primary darken-1 pa-2 font-weight-light ma-2"
+          class="primary darken-1 pa-2 font-weight-light mx-6 my-6 rounded-xl"
         >
           <span class="px-3 primary--text text--lighten-4">
-            hyuwah &copy; {{ new Date().getFullYear() }} | Made with
+            &copy; {{ new Date().getFullYear() }} | Made with
             <v-icon small class="red--text text--lighten-2">favorite</v-icon> in
             Indonesia
           </span>

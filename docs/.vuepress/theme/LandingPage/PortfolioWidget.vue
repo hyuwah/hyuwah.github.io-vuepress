@@ -5,18 +5,19 @@
     md="8"
     offset-sm="1"
     offset-md="2"
-    class="pb-5 mt-5 mb-5"
+    class="pb-5 mt-5 mb-8"
   >
     <!-- Section Title & More button -->
-    <v-row v-scroll-reveal="{ delay: 250 }" class="mb-4" align="end">
-      <h2 class="display-2 white--text">Featured Portfolios</h2>
+    <v-row v-scroll-reveal="{ delay: 250 }" class="mt-2 mb-4 mr-2 ml-2" align="end">
+      <h1 class="primary--text">Featured Portfolios</h1>
       <v-spacer></v-spacer>
-      <v-btn text dark @click="toPortfolioPage">
+      <v-btn rounded color="primary" @click="toPortfolioPage">
         Show More
         <v-icon right>chevron_right</v-icon>
       </v-btn>
     </v-row>
     <!-- Featured Portfolio -->
+
     <v-row>
       <v-col
         v-scroll-reveal="{ delay: 250 }"
@@ -26,41 +27,47 @@
         md="12"
         lg="6"
       >
-        <v-card class="rounded-lg pl-2 pr-2 ">
+        <v-card outlined class="rounded-xl">
           <v-row class="pa-3">
             <v-col align-self="center" cols="12" sm="6">
-              <v-img width="100%" contain :src="item.src" />
+              <v-img class="rounded-lg" width="100%" contain :src="item.src" />
             </v-col>
-            <v-col cols="12" sm="6" class="pa-3">
-              <div class="text-h6 font-weight-bold">{{ item.title }}</div>
-              <v-row v-if="item.github.stars||item.github.fork" class="pl-3 pr-3 pb-3 pt-1">
-                <img v-if="item.github.stars" :src="item.github.stars" class="mr-2" />
-                <img v-if="item.github.forks" :src="item.github.forks" />
+            <v-col cols="12" sm="6" class="pa-4">
+              <div class="text-h6 font-weight-bold mb-3">{{ item.title }}</div>
+              <v-row v-if="item.github.stars||item.github.fork" class="pl-3 pr-3 mb-3">
+                  <img v-if="item.github.stars" :src="item.github.stars" class="mr-2 my-1"/>
+                  <img v-if="item.github.forks" :src="item.github.forks" class="my-1"/>
               </v-row>
               <p class="text-subtitle-2 text--secondary">{{ item.subtitle }}</p>
-              <p class="text-body-1">{{ item.desc }}</p>
+              <p class="text-body-2">{{ item.desc }}</p>
             </v-col>
           </v-row>
           <v-card-actions>
-            <v-spacer />
-            <v-btn
-              v-if="item.github.url"
-              outlined
-              class="ma-2"
-              @click="toUrl(item.github.url)"
-            >
-              <v-icon left dark>fab fa-github</v-icon>
-              Repository
-            </v-btn>
-            <v-btn
-              v-if="item.playstore"
-              outlined
-              class="ma-2"
-              @click="toUrl(item.playstore)"
-            >
-              <v-icon left dark>fab fa-google-play</v-icon>
-              Playstore
-            </v-btn>
+            <v-row class="mx-1 mb-1">
+                <v-btn
+                v-if="item.github.url"
+                outlined
+                rounded
+                elevation="2"
+                class="ma-2 pl-4 pr-4"
+                @click="toUrl(item.github.url)"
+              >
+                <v-icon left dark>fab fa-github</v-icon>
+                Repository
+              </v-btn>
+              <v-btn
+                v-if="item.playstore"
+                outlined
+                rounded
+                elevation="2"
+                class="ma-2 pl-4 pr-4"
+                @click="toUrl(item.playstore)"
+              >
+                <v-icon left dark>fab fa-google-play</v-icon>
+                Playstore
+              </v-btn>
+              </v-row>
+            
           </v-card-actions>
         </v-card>
       </v-col>
