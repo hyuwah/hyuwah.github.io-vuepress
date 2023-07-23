@@ -2,9 +2,8 @@
   <v-footer color="primary" dark height="auto" padless>
     <v-row no-gutters class="mt-6">
       <v-col cols=12>
-        <v-row class="pa-2">
-
-          <v-col cols=10 md=3 offset=1 offset-md=8>
+        <div>
+          <v-col class="px-8">
             <v-row align="center" justify="end">
               <img
                 height="48px"
@@ -21,10 +20,10 @@
               >
             </v-row>
           </v-col>
-        </v-row>
+        </div>
 
         <v-row justify="center"
-          class="primary darken-1 pa-2 font-weight-light mx-6 my-6 rounded-xl"
+          class="primary darken-1 pa-2 font-weight-light mx-4 my-6 rounded-xl"
         >
           <span class="px-3 primary--text text--lighten-4">
             &copy; {{ new Date().getFullYear() }} | Made with
