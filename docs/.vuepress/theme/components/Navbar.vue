@@ -3,7 +3,7 @@
         <v-spacer></v-spacer>
         <v-toolbar-title @click="toHome" style="cursor:pointer">
         <v-layout align-center  class="primary--text">
-            <img height="36px" src="https://hyuwah.github.io/assets/images/logo.png"/>
+            <img height="30px" src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1690197583/hyuwah.github.io/mw_logo_only.svg" class="mr-2" style="filter: invert(0.35) sepia(1) saturate(5) hue-rotate(175deg);"/>
             <h5 class="headline font-weight-bold">hyuwah</h5>
             <h5 class="headline">.my.id</h5>
             <!-- <span class="font-weight-bold">.github</span>

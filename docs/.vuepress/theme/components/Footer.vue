@@ -6,15 +6,16 @@
           <v-col class="px-8">
             <v-row align="center" justify="end">
               <img
-                height="48px"
-                src="https://hyuwah.github.io/assets/images/logo.png"
+                height="30px"
+                src="https://res.cloudinary.com/hyuwah-github-io/image/upload/v1690197583/hyuwah.github.io/mw_logo_only.svg"
+                class="mr-2" style="filter: invert(1);"
               />
               <h5 class="headline font-weight-bold">hyuwah</h5>
               <h5 class="headline">.my.id</h5>
               <!-- <span class="title font-weight-bold">.github</span>
             <span class="title font-weight-light">.io</span> -->
             </v-row>
-            <v-row justify="end" class="mt-2">
+            <v-row justify="end" class="mt-4">
               <span class="text-right"
                 >A website to showcase the work of Muhamad Wahyudin</span
               >
