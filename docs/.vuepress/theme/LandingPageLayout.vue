@@ -97,6 +97,9 @@
             </v-hover>
           </v-col>
 
+          <!-- WORK EXPERIENCE -->
+          <WorkExperienceWidget />
+
           <!-- PORTFOLIO WIDGET -->
           <PortfolioWidget />
 
@@ -125,12 +128,14 @@ import DefaultLayout from "./Layout";
 import Contact from "./LandingPage/Contact";
 import PortfolioWidget from "./LandingPage/PortfolioWidget";
 import CodingStats from "./LandingPage/CodingStats";
+import WorkExperienceWidget from "./LandingPage/WorkExperienceWidget";
 export default {
   components: {
     DefaultLayout,
     Contact,
     PortfolioWidget,
-    CodingStats
+    CodingStats,
+    WorkExperienceWidget
   },
   data() {
     return {
