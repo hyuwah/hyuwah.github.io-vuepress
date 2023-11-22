@@ -145,12 +145,12 @@ export default {
           src:
             "https://lh3.googleusercontent.com/0FsJRDl4zaxo4LrIfgXtAe9C0dETEPTOn4VkJEikGRoutPOaXsvlsDO0ZQuonIK-uocT=w1920-h929-rw",
           title: "CatatanKu",
-          subtitle: "Android app for notes & todos",
-          desc: `Simple note taking android app developed with Java. Basic CRUD using Cursor Loader pattern into SQLite database. CatatanKu is a lightweight notepad application to keep track of your thoughts and ideas.`,
+          subtitle: "Simple note taking android app with markdown feature",
+          desc: `CatatanKu is a lightweight notepad application to keep track of your thoughts and ideas. It uses RoomDB for basic CRUD, Dagger Hilt for DI, Markwon for markdown renderer.`,
           github: {
             url: "https://github.com/hyuwah/android-catatanku",
-            stars: "",
-            forks: "",
+            stars: "https://img.shields.io/github/stars/hyuwah/android-catatanku?style=social",
+            forks: "https://img.shields.io/github/forks/hyuwah/android-catatanku?style=social"
           },
           playstore:
             "https://play.google.com/store/apps/details?id=io.github.hyuwah.catatanku&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1",
@@ -162,8 +162,8 @@ export default {
             "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1588829097/IdentitasKu/1200.gif",
           title: "IdentitasKu",
           subtitle:
-            "App to help you save your important data that you don't have time to remember",
-          desc: `Save your ID card, handphone number, address data in a centralized way. Send those data to other applications such as chat app. Or copy the data wherever the data is needed. Data protected with password / fingerprint & encryption`,
+            "Offline App to help you save your important data that you don't have time to remember",
+          desc: `Save your ID card, handphone number, address data in a centralized way. Send those data to other applications such as chat app, or copy the data wherever it's needed. Data is saved locally & protected with password / fingerprint & encryption`,
           github: {
             url: "https://github.com/hyuwah/IdentitasKu",
             stars:

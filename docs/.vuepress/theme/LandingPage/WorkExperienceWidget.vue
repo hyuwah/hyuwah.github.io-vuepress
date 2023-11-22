@@ -121,7 +121,7 @@ export default {
           Here I learnt a lot about custom view and code reusability, writing technical documentation, and <strong>third-party services integration</strong> (i.e. AppsFlyer, Netcore).
           I also had the chance to <strong>reduce CI/CD build time</strong> by optimizing the linter process.
           `,
-          tenure: "2021 - Present",
+          tenure: "2021 - 2023",
           job_title: "Software Engineer - Android",
         },
       ],

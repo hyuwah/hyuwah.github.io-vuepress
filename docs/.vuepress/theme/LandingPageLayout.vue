@@ -41,9 +41,9 @@
                 <v-card-title primary-title class="pb-0">
                   <v-col align=center >
                     <h2 class="primary--text mb-2">Hello There!</h2>
-                    <h5 class="font-weight-light" style="word-break: break-word">
-                      I'm Wahyu, a Software Engineer handling mobile development specifically on Android with 5+ years of experience in the startup industry. I was a Google Certified Associate Android Developer from 2019 until 2022. I am passionate about creating innovative and user-friendly mobile apps, and I am always looking for new ways to use technology to solve real-world problems.
-                    </h5>
+                    <p style="word-break: break-word">
+                      I'm Wahyu, a Software Engineer that specializes in <b>Mobile Application Development</b> specifically on Android with <b>5+ YoE</b> in the startup industry. I was a <b>Google Certified Associate Android Developer (Kotlin)</b> from 2019 until 2022. I'm passionate about creating innovative solution and user-friendly mobile apps, and I'm always looking for the best ways to use technology to solve real-world problems.
+                    </p>
                   </v-col>
                 </v-card-title>
                 <v-card-text class="pr-4 pl-4 pb-4 pt-0 text-center">
@@ -151,22 +151,28 @@ export default {
           link: "https://github.com/hyuwah"
         },
         {
-          title: "LinkedIn",
-          img:
-            "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1547297332/img_linkedin_gzqqg1.png",
-          link: "https://www.linkedin.com/in/hyuwah/"
-        },
-        {
           title: "DEV.to",
           img:
             "https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg",
           link: "https://dev.to/hyuwah"
         },
         {
-          title: "Codepen",
+          title: "LinkedIn",
           img:
-            "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1547297332/img_codepen_uxypzn.png",
-          link: "https://codepen.io/hyuwah/"
+            "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1547297332/img_linkedin_gzqqg1.png",
+          link: "https://www.linkedin.com/in/hyuwah/"
+        },
+        {
+          title: "Leetcode",
+          img:
+            "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1700624533/hyuwah.github.io/assets/152531278-5e01909d-0c2e-412a-8acc-4a06863c244d.png",
+          link: "https://leetcode.com/hyuwah/"
+        },
+        {
+          title: "HackerRank",
+          img:
+            "https://res.cloudinary.com/hyuwah-github-io/image/upload/v1700624692/hyuwah.github.io/assets/lqlkg85sw4sgmp2xvznh.webp",
+          link: "https://www.hackerrank.com/profile/hyuwah"
         }
       ]
     };
